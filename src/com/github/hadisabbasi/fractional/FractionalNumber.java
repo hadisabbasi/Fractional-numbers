@@ -23,8 +23,10 @@ public class FractionalNumber {
     }
 
     public void setDenominator(int denominator) {
-        // todo: validate parameter. if value > 0
-        this.denominator = denominator;
+        if (denominator > 0)
+            this.denominator = denominator;
+        else
+            System.out.println("denominator shouldn't be less than zero");
     }
 
     public int getDenominator() {
